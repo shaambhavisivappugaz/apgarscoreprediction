@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
+*{
+  font-family: 'Montserrat',sans-serif;
+}
+body {
+  background: linear-gradient(90deg, rgba(2,0,36,1) 10%, rgba(9,9,121,1) 25%, rgba(0,212,255,1) 100%);
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  }
+  
+  .container {
+    position: absolute;
+    transform: translate(-70%,-70%);
+    top: 25%;
+    left: 50%;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    justify-content: center;
+    align-items: center; /* Add this property to center horizontally */
+    width: 550px;
+    padding: 6em;
+    margin: 0 auto; /* Add this property to center horizontally */
+    border: none;
+    border-left: 1px solid $white;
+    border-top: 1px solid $white;
+    border-radius: 5000px;
+    backdrop-filter: blur(5px);
+    box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .form-group input[type="radio"] {
+    margin-right: 10px;
+    display: none;
+  
+  }
+  .radio-group
+  {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+   
+    border-radius: 4px;
+    display: inline-block;
+    padding: 5px;
+  }
+  .radio-group label{
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    transition: .2s all ease-in-out;
+    width: 80px;
+}
+.radio-group input[type="radio"]:checked + label {
+  background:radial-gradient( rgba(0,212,255,1),transparent);
+  border: 1px solid white;
+}
+input[type="text"] {
+  border: 1px solid rgba(0,0,0,.2);
+  height: 30px;
+  line-height: 30px;
+  width: 100px;
+  border-radius:60px;
+  background: #fff;
+  transition: .2s all ease-in-out;
+}
+
+input[type="text"]:hover {
+  background:transparent;
+  color: white
+  
+}
+input[type="button"] {
+    border: 1px solid rgba(0,0,0,.2);
+    height: 45px;
+    line-height: 38px;
+    width: 150px;
+    border-radius: 25px;
+    background: #fff;
+    transition: .2s all ease-in-out;
+  }
+  
+  input[type="button"]:hover {
+    background:rgba(0,212,255,1);
+    color: white
+    
+  }
+  
+  .result-item {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Apgar Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+
+</head>
+<body>
+    
+        <form action="/predict" method="post">
+        <h1>Apgar Score Prediction Form</h1>
+        <label><b>Gender:</b></label>
+        <div class="radio-group">
+            <input type="radio" id="male" name="sex" value="Male"  >
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="sex" value="Female">
+            <label for="female">Female</label>
+        </div>
+
+        <label><b>Mode of Delivery:</b></label>
+        <div class="radio-group">
+            <input type="radio" id="cs" name="mode_of_delivery" value="Caesarean_Section" >
+            <label for="cs">Caesarean Section</label>
+            <input type="radio" id="vd" name="mode_of_delivery" value="Vaginal_Delivery">
+            <label for="vd">Vaginal Delivery</label>
+        </div>
+
+        <label><b>Muscle Tone:</b></label>
+        <div class="radio-group">
+            <input type="radio" id="floppy" name="muscle_tone" value="floppy" >
+            <label for="floppy">Floppy</label>
+            <input type="radio" id="normal" name="muscle_tone" value="normal">
+            <label for="normal">Normal</label>
+            <input type="radio" id="active" name="muscle_tone" value="active">
+            <label for="active">Active</label>
+            <input type="radio" id="absent" name="muscle_tone" value="absent">
+            <label for="absent">Absent</label>
+        </div>
+
+        <label><b>Respiratory Effort:</b></label>
+        <div class="radio-group">
+            <input type="radio" id="strong" name="respiratory_effort" value="strong" >
+            <label for="strong">Strong</label>
+            <input type="radio" id="normal" name="respiratory_effort" value="normal">
+            <label for="normal">Normal</label>
+            <input type="radio" id="weak" name="respiratory_effort" value="weak">
+            <label for="weak">Weak</label>
+            <input type="radio" id="absent" name="respiratory_effort" value="absent">
+            <label for="absent">Absent</label>
+        </div>
+
+        <label><b>Color:</b></label>
+        <div class="radio-group">
+            <input type="radio" id="pink" name="color" value="pink">
+            <label for="pink">Pink</label>
+            <input type="radio" id="normal" name="color" value="normal">
+            <label for="normal">Normal</label>
+            <input type="radio" id="pale" name="color" value="pale">
+            <label for="pale">Pale</label>
+            <input type="radio" id="blue" name="color" value="blue">
+            <label for="blue">Blue</label>
+        </div>
+
+       <label><b>Reflex Irritability:</b></label>
+        <div class="radio-group">
+            <input type="radio" id="minimal" name="reflex_irritability" value="minimal">
+            <label for="minimal">Minimal</label>
+            <input type="radio" id="normal" name="reflex_irritability" value="normal">
+            <label for="normal">Normal</label>
+            <input type="radio" id="active" name="reflex_irritability" value="active">
+            <label for="active">Active</label>
+            <input type="radio" id="absent" name="reflex_irritability" value="absent">
+            <label for="absent">Absent</label>
+        </div>
+
+            <label for="heart_rate1"><b>Heart Rate:</b></label>
+            <input type="text" id="heart_rate1" name="heart_rate1"><br>
+            
+            <label for="c_birth_weight_g2"><b>Birth Weight:</b></label>
+            <input type="text" id="c_birth_weight_g2" name="c_birth_weight_g2"><br>
+            
+            <label for="mothers_age_cat"><b>Mother's Age:</b></label>
+            <input type="text" id="mothers_age_cat" name="mothers_age_cat"><br>
+            <label for="c_cat_ga"><b>Gestational Age:</b></label>
+            <input type="text" id="c_cat_ga" name="c_cat_ga"><br>
+            <input type="button" value="Submit" onclick="submitForm()">
+            <h1>The predicted value is: <span id="value"></span></h1>
+    </form>
+
+    
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+            
